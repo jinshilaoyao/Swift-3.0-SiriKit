@@ -48,6 +48,8 @@ class ViewController: UIViewController {
             let totalAnimationDuration = Double(instructions.count) * individualInstructionAnimationDuration
             let relativeIndividualDuration = 1 / Double(instructions.count)
             
+            
+            //用来直接使用关键帧动画而不用借助CoreAnimation来实现
             UIView.animateKeyframes(withDuration: totalAnimationDuration, delay: 0, options: [], animations: { 
               
                 for (index,instruction) in instructions.enumerated() {
